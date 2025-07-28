@@ -1,0 +1,143 @@
+# User Stories for AI School MEAN Stack Application
+
+## Epic 1: Authentication and Role Management
+### User Story 1: Teacher Login
+- **As a** teacher
+- **I want** to log in to the application
+- **So that** I can access my teaching dashboard and AI tools.
+
+#### Description
+- **Technical Details**:
+  - Create a login endpoint in the backend using Express.js.
+  - Use JWT for authentication.
+  - Design a login form in Angular.
+  - Validate user credentials against the MongoDB database.
+- **Step-by-Step Guide**:
+  1. Set up a `/login` endpoint in the backend.
+  2. Implement JWT token generation upon successful login.
+  3. Create a login form in Angular with fields for email and password.
+  4. Connect the form to the backend using Angular services.
+  5. Test the login functionality locally.
+
+### User Story 2: Student Login
+- **As a** student
+- **I want** to log in to the application
+- **So that** I can access AI tools with restrictions.
+
+#### Description
+- **Technical Details**:
+  - Similar to teacher login but with role-based restrictions.
+  - Implement role validation in the backend.
+- **Step-by-Step Guide**:
+  1. Extend the `/login` endpoint to check user roles.
+  2. Restrict access to certain features based on the student role.
+  3. Test role-based access control locally.
+
+### User Story 3: Role-Based Access Control
+- **As a** system administrator
+- **I want** to assign roles to users
+- **So that** teachers and students have appropriate access levels.
+
+#### Description
+- **Technical Details**:
+  - Create a role management module in the backend.
+  - Store roles in the MongoDB database.
+- **Step-by-Step Guide**:
+  1. Add a `role` field to the user schema in MongoDB.
+  2. Implement middleware in Express.js to check roles.
+  3. Test role-based access control.
+
+## Epic 2: AI Interaction
+### User Story 4: Teacher AI Tool Access
+- **As a** teacher
+- **I want** to use AI tools without restrictions
+- **So that** I can teach effectively.
+
+#### Description
+- **Technical Details**:
+  - Integrate OpenAI API.
+  - Create endpoints for AI tool access.
+- **Step-by-Step Guide**:
+  1. Set up an OpenAI API key in the backend.
+  2. Create endpoints for AI interactions.
+  3. Test the endpoints locally.
+
+### User Story 5: Student AI Tool Access
+- **As a** student
+- **I want** to use AI tools with daily limits and specific prompt categories
+- **So that** I can learn AI responsibly.
+
+#### Description
+- **Technical Details**:
+  - Implement daily limits in the backend.
+  - Restrict prompt categories based on user roles.
+- **Step-by-Step Guide**:
+  1. Add a `usageLimit` field to the user schema.
+  2. Implement logic in the backend to enforce limits.
+  3. Test the restrictions locally.
+
+## Epic 3: User Management
+### User Story 6: Create User Profiles
+- **As a** system administrator
+- **I want** to create user profiles
+- **So that** teachers and students can log in.
+
+#### Description
+- **Technical Details**:
+  - Create a user management module in the backend.
+  - Implement CRUD operations for user profiles.
+- **Step-by-Step Guide**:
+  1. Set up endpoints for creating user profiles.
+  2. Test the endpoints locally.
+
+### User Story 7: Update User Profiles
+- **As a** system administrator
+- **I want** to update user profiles
+- **So that** user information remains accurate.
+
+#### Description
+- **Technical Details**:
+  - Extend the user management module.
+- **Step-by-Step Guide**:
+  1. Add an endpoint for updating user profiles.
+  2. Test the endpoint locally.
+
+### User Story 8: Delete User Profiles
+- **As a** system administrator
+- **I want** to delete user profiles
+- **So that** inactive users are removed from the system.
+
+#### Description
+- **Technical Details**:
+  - Extend the user management module.
+- **Step-by-Step Guide**:
+  1. Add an endpoint for deleting user profiles.
+  2. Test the endpoint locally.
+
+## Epic 4: Deployment and CI/CD
+### User Story 9: Deploy Application
+- **As a** developer
+- **I want** to deploy the application on a free tier platform
+- **So that** it is accessible to users.
+
+#### Description
+- **Technical Details**:
+  - Use Render, Heroku, or Vercel for deployment.
+- **Step-by-Step Guide**:
+  1. Set up deployment scripts.
+  2. Deploy the application.
+
+### User Story 10: Automate Testing
+- **As a** developer
+- **I want** to automate testing
+- **So that** the application remains stable during development.
+
+#### Description
+- **Technical Details**:
+  - Use GitHub Actions for CI/CD.
+- **Step-by-Step Guide**:
+  1. Set up GitHub Actions workflows.
+  2. Automate testing and deployment.
+
+---
+These user stories are designed to guide the development of the AI School application in an agile manner.

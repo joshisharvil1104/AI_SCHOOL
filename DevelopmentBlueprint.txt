@@ -1,0 +1,95 @@
+# Development Blueprint for AI School MEAN Stack Application
+
+## 1. Project Overview
+The AI School application aims to help schools teach AI to students. It will support two types of users: teachers and students, with role-based access to AI tools and dashboards.
+
+## 2. Goals and Objectives
+- Provide teachers with unrestricted access to AI tools and teaching dashboards.
+- Offer students restricted access to AI functionality, including daily limits and specific prompt categories.
+- Build a scalable and modular MEAN stack application.
+- Ensure the application is easy to use and maintain.
+
+## 3. Suggested Tech Stack
+- **Backend**: Node.js, Express.js
+- **Frontend**: Angular
+- **Database**: MongoDB
+- **AI API**: OpenAI (free tier initially, with upgrade options)
+- **Source Control**: GitHub
+
+## 4. System Architecture Diagram
+- **Frontend**: Angular application for user interface.
+- **Backend**: Node.js with Express.js for API endpoints.
+- **Database**: MongoDB for storing user data, roles, and AI interaction logs.
+- **AI API**: Integration with OpenAI for AI functionalities.
+
+## 5. Backend Module Breakdown
+- **Authentication Module**: Handles login flows for teachers and students.
+- **Role Management Module**: Implements RBAC (Role-Based Access Control).
+- **AI Interaction Module**: Manages requests to the AI API.
+- **User Management Module**: CRUD operations for user profiles.
+
+## 6. Frontend Module Breakdown
+- **Login Module**: Separate login flows for teachers and students.
+- **Dashboard Module**: Teacher dashboard with unrestricted access and student dashboard with limited access.
+- **AI Interaction Module**: Interfaces for interacting with AI tools.
+
+## 7. Authentication and Role Management Design
+- **Authentication**: JWT-based authentication.
+- **Role Management**: RBAC implementation with roles for teachers and students.
+
+## 8. AI API Integration Strategy
+- Start with OpenAI free tier.
+- Implement modular API integration to allow switching to paid/pro versions later.
+
+## 9. Data Models and Schemas
+- **User Schema**: Includes fields for name, email, password, role (teacher/student).
+- **AI Interaction Schema**: Logs user interactions with the AI API.
+
+## 10. Access Control Rules (RBAC)
+- **Teachers**: Full access to AI tools and dashboards.
+- **Students**: Restricted access with daily limits and specific prompt categories.
+
+## 11. Agile Development Strategy
+- **Weekly Sprints**: Divide tasks into small, achievable goals.
+- **Epics and Stories**: Focus on MVP features first.
+- **Sample Sprint Board Layout**:
+  - To Do
+  - In Progress
+  - Review
+  - Done
+- **Branching Model**:
+  - `main`: Stable production-ready code.
+  - `dev`: Development branch.
+  - `feature/*`: Feature-specific branches.
+  - `bugfix/*`: Bug fixes.
+
+## 12. Deployment Plan
+- **Initial Deployment**: Use free platforms like Render, Heroku, or Vercel.
+- **Scalable Infrastructure**: Plan migration to AWS or Azure for scalability.
+
+## 13. Future Roadmap and Scalability Plans
+- Add advanced AI features.
+- Expand role-based access for additional user types.
+- Implement analytics dashboards for teachers.
+
+## 14. Security Practices
+- Use HTTPS for secure communication.
+- Encrypt sensitive data.
+- Regularly update dependencies.
+
+## 15. Contribution Guidelines for GitHub
+- Use feature branches for new tasks.
+- Write clear commit messages.
+- Follow coding standards.
+
+## 16. Testing Strategy
+- **Unit Testing**: Test individual modules.
+- **Integration Testing**: Test interactions between modules.
+- **E2E Testing**: Test the entire application flow.
+
+## 17. Basic CI/CD Pipeline Suggestion
+- Use GitHub Actions for CI/CD.
+- Automate testing and deployment processes.
+
+---
+This document serves as a comprehensive guide for developers to start working on the AI School application immediately. It is modular and can be expanded sprint by sprint.
