@@ -1,3 +1,48 @@
+# Project Setup Process
+
+Follow these steps to set up and run the AI School project on your local machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/joshisharvil1104/AI_SCHOOL.git
+   ```
+
+2. **Navigate to the project directory:**
+   ```bash
+   cd AI_SCHOOL
+   ```
+
+3. **Install all dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **(Optional) Install nodemon for auto-restart on file changes:**
+   ```bash
+   npm install --save-dev nodemon
+   ```
+
+5. **Start the server:**
+   - For normal start:
+     ```bash
+     npm start
+     ```
+   - For development with auto-restart:
+     ```bash
+     npm run dev
+     ```
+
+6. **Access the application:**
+   - Open your browser and go to:
+     ```
+     http://localhost:4000
+     ```
+
+7. **API Endpoints:**
+   - Auth endpoints: `http://localhost:4000/api/auth/...`
+   - Admin endpoints: `http://localhost:4000/api/admin/...`
+
+---
 # AI School MEAN Stack Application
 
 ## Project Overview
