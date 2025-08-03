@@ -1,25 +1,22 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const { connectDB } = require('./backend/config/db'); // Import the connectDB function
 const cors = require('cors');
+const authRoutes = require('./backend/routes/auth');
+const adminRoutes = require('./backend/routes/admin');
 
 const app = express();
-const PORT = 4000; // Changed port to 4000
+const PORT = 4000; 
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+// Auth routes
+app.use('/api/auth', authRoutes);
+// Admin routes
+app.use('/api/admin', adminRoutes);
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/ai_school', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-  console.log('Connected to MongoDB');
-});
+connectDB();
 
 // Sample Route
 app.get('/', (req, res) => {
